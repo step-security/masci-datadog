@@ -1,0 +1,39 @@
+name: 'Datadog Action'
+description: 'Push Datadog metrics and events from GitHub Actions'
+author: 'step-security'
+inputs:
+  api-key:
+    description: 'A valid Datadog API Key'
+    required: true
+  api-url:
+    description: 'The URL of the API endpoint, defaults to US datacenter'
+    default: 'https://api.datadoghq.com'
+  metrics:
+    description: 'A list of metrics objects to send, see docs for details'
+    default: '[]'
+  events:
+    description: 'A list of event objects to send, see docs for details'
+    default: '[]'
+  service-checks:
+    description: 'A list of service check objects to send, see docs for details'
+    default: '[]'
+  log-api-url:
+    description: 'The URL of the Log API endpoint, defaults to JSON or plain text format over HTTPS'
+    default: 'https://http-intake.logs.datadoghq.com'
+  logs:
+    description: 'A list of log objects to send, see docs for details'
+    default: '[]'
+  ignore-timeouts:
+    description: 'Ignore timeout errors and continue execution'
+    required: false
+    default: 'false'
+  timeout:
+    description: 'Timeout in milliseconds for the HTTP client'
+    required: false
+    default: '30000'
+runs:
+  using: 'node24'
+  main: 'dist/index.js'
+branding:
+  icon: 'bar-chart-2'
+  color: 'purple'
