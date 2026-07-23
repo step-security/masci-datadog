@@ -1,6 +1,6 @@
 {
   "name": "datadog-action",
-  "version": "1.0.0",
+  "version": "2.0.4",
   "private": false,
   "description": "Datadog action",
   "main": "lib/main.js",
