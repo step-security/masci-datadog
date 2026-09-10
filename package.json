@@ -1,6 +1,6 @@
 {
   "name": "datadog-action",
-  "version": "2.0.4",
+  "version": "2.0.6",
   "private": false,
   "description": "Datadog action",
   "main": "lib/main.js",
@@ -25,17 +25,17 @@
   "author": "step-security",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.11.1",
+    "@actions/core": "^2.0.3",
     "@actions/http-client": "^1.0.8",
     "@types/js-yaml": "^3.12.5",
-    "axios": "^1.18.1",
+    "axios": "^1.20.0",
     "js-yaml": "^4.3.1"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.0",
     "@typescript-eslint/parser": "^4.12.0",
-    "@vercel/ncc": "^0.36.1",
+    "@vercel/ncc": "^0.45.0",
     "eslint": "^7.17.0",
     "eslint-plugin-github": "^4.1.1",
     "eslint-plugin-jest": "^24.4.2",
