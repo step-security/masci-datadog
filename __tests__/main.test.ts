@@ -107,7 +107,7 @@ describe('end-to-end tests', () => {
       return
     }
 
-    process.env['INPUT_METRICS'] = yaml.safeDump([
+    process.env['INPUT_METRICS'] = yaml.dump([
       {
         type: 'count',
         name: 'test.builds.count',
@@ -123,7 +123,7 @@ describe('end-to-end tests', () => {
         host: 'example.com'
       }
     ])
-    process.env['INPUT_EVENTS'] = yaml.safeDump([
+    process.env['INPUT_EVENTS'] = yaml.dump([
       {
         title: 'Building success',
         text: 'Version 1.0.0 is available on Docker Hub',
@@ -131,7 +131,7 @@ describe('end-to-end tests', () => {
         host: 'example.com'
       }
     ])
-    process.env['INPUT_SERVICE-CHECKS'] = yaml.safeDump([
+    process.env['INPUT_SERVICE-CHECKS'] = yaml.dump([
       {
         check: 'app.ok',
         message: 'Build has failed',
@@ -140,7 +140,7 @@ describe('end-to-end tests', () => {
         tags: ['foo:bar']
       }
     ])
-    process.env['INPUT_LOGS'] = yaml.safeDump([
+    process.env['INPUT_LOGS'] = yaml.dump([
       {
         ddsource: 'nginx',
         ddtags: 'env:staging,version:5.1',
@@ -174,7 +174,7 @@ describe('end-to-end tests', () => {
     // Set an impossibly low timeout in order to force a client failure
     process.env['INPUT_TIMEOUT'] = '10'
 
-    process.env['INPUT_METRICS'] = yaml.safeDump([
+    process.env['INPUT_METRICS'] = yaml.dump([
       {
         type: 'count',
         name: 'test.builds.count',
