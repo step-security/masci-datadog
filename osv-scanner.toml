@@ -1,0 +1,7 @@
+[[IgnoredVulns]]
+id = "GHSA-3g3m-2fjr-6pw4"
+reason = "glob is a dev-only transitive dep of jest (pins glob ^13); not bundled into dist or used at runtime. No fix without overrides; revisit when jest moves to glob >=14.0.2."
+
+[[IgnoredVulns]]
+id = "GHSA-g3hv-75wg-m249"
+reason = "minimatch is a dev-only transitive dep of jest/glob (pins ^10); not bundled into dist or used at runtime. No fix without overrides; revisit when jest moves to minimatch >=11.0.1."
